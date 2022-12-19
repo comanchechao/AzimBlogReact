@@ -5,7 +5,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Blogs from "./views/blogs";
 import { Provider } from "react-redux";
-
+import './assets/index.css'
 import store from "./Store/orders";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 
