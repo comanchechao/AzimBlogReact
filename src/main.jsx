@@ -5,9 +5,10 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Blogs from "./views/blogs";
 import { Provider } from "react-redux";
-import './assets/index.css'
+import "./assets/index.css";
 import store from "./Store/orders";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import Blog from './views/blog'
 
 const theme = extendTheme({
   colors: {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Blogs />,
+  },
+  {
+    path: "/blogs/:id",
+    element: <Blog />,
   },
 ]);
 
