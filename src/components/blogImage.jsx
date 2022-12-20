@@ -40,7 +40,7 @@ export default function blogImage(props) {
   } else {
     return (
       <div className="w-full h-full">
-        <img className="w-full h-full" src={image} alt="" />
+        <img className=" w-full h-carousel object-contain" src={image} alt="" />
       </div>
     );
   }

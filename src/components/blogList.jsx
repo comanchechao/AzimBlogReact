@@ -36,12 +36,12 @@ export default function blogList() {
 
   if (loading) {
     return (
-      <div className="rounded">
+      <div className="rounded w-full h-full flex items-center justify-center flex-col space-y-28">
         <Box padding="10" boxShadow="lg" bg="white">
           <Stack>
-            <Skeleton height="40px" />
-            <Skeleton height="40px" />
-            <Skeleton height="40px" />
+            <SkeletonCircle size="250" />
+            <SkeletonCircle size="250" />
+            <SkeletonCircle size="250" />
           </Stack>
         </Box>
       </div>
@@ -57,7 +57,7 @@ export default function blogList() {
   }
 
   return (
-    <div className="w-full lg:p-14 flex justify-center flex-wrap items-center h-full">
+    <div className="w-full lg:p-24 flex justify-center flex-wrap items-center h-full">
       <div className="flex bg-white items-center rounded justify-end w-full h-12">
         <SquaresFour className=" transition hover:bg-mainBlue" size={45} />
         <Rows className=" transition hover:bg-mainBlue" size={45} />
@@ -66,29 +66,27 @@ export default function blogList() {
         return (
           <div
             key={blog.id}
-            className="flex flex-wrap justify-center rounded space-y-5 px-4 py-7 w-full h-full  bg-mainWhite shadow-2xl"
+            className="flex flex-wrap justify-center rounded-sm space-y-10 p-12 w-full h-full my-14 bg-mainCream shadow-2xl"
           >
-            <div className="flex bg-white items-center rounded justify-end w-full h-12"></div>
-            <div className="flex flex-col shadow-2xl space-y-2 md:flex-row lg:flex-row bg-mainCream  h-full">
+            <div className="flex flex-col   space-y-2 md:flex-row lg:flex-row    h-full">
               <div className="w-full">
-                <BlogImage
-                  className="w-full h-full"
-                  BlogImage={blog.firstImage}
-                />
+                <BlogImage className=" " BlogImage={blog.firstImage} />
               </div>
-              <div className="flex p-2 space-y-2 flex-col justify-center items-center w-1/2">
-                <h1 className="text-4xl m-5 lg:text-9xl flex-col font-bold">
-                  {blog.blogTitle}
-                </h1>
-                <p className="text-xl lg:text-4xl">Sunday 2021</p>
-                <p className="text-xl lg:text-3xl">{blog.firstInfo}</p>
-              </div>
-              <div className="flex justify-start p-5  items-end">
-                <Link to={`/blogs/${blog.id}`}>
-                  <button className="px-12 transition ease-in duration-300 border-l-8 border-mainBlue hover:bg-mainBlue py-1 text-2xl hover:text-gray-600 font-bold my-3 bg-white outline-2 outline rounded-full outline-black">
-                    Continue
-                  </button>
-                </Link>
+              <div className="flex p-2 space-y-5 text-center flex-col justify-between pt-14 items-center w-1/2  ">
+                <div>
+                  <p className="text-xl lg:text-3xl">Sunday 2021</p>
+                  <h1 className="text-3xl m-6 lg:text-6xl flex-col font-bold">
+                    {blog.blogTitle}
+                  </h1>
+                  <p className="text-xl lg:text-3xl">{blog.firstInfo}</p>
+                </div>
+                <div className="flex justify-start p-5  items-end">
+                  <Link to={`/blogs/${blog.id}`}>
+                    <button className="px-12 transition ease-in duration-300  border-4 border-dashed border-CoolGray-900 py-2 text-4xl hover:text-mainBlue hover:bg-CoolGray-900 font-bold my-3 bg-mainCream  rounded-full  ">
+                      Continue
+                    </button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>

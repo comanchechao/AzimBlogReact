@@ -1,70 +1,80 @@
-:root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+@font-face {
+  font-family: "LaleZar";
+  src: url("../src/assets/fonts/Bellefair-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-display: swap;
+  unicode-range: U+0020-007F;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+@font-face {
+  font-family: "SultanFont";
+  src: url("../src/assets/fonts/Cookie-Regular.ttf");
+  font-style: normal;
+  font-display: swap;
+
+  unicode-range: U+0020-007F;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@font-face {
+  font-family: "Rezvan";
+  src: url("../src/assets/fonts/Qs_Iranyekan.ttf");
+  font-style: normal;
+  font-weight: 700;
+
+  font-display: swap;
+}
+* {
+  font-family: "LaleZar", "Rezvan";
+}
+* {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #bb9651 #ffe3cb;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+*::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@media only screen and (max-width: 767px) {
+  *::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #bb9651;
+  border: 0px none #ffffff;
+  border-radius: 86px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00ffd1;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #13cfad;
+}
+::-webkit-scrollbar-track {
+  background: #ffe3cb;
+  border: 0px none #ffffff;
+  border-radius: 100px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #f8ddd9;
+}
+::-webkit-scrollbar-track:active {
+  background: #f8ddd9;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }

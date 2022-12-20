@@ -86,15 +86,15 @@ export default function navbar() {
           to={"/"}
           className="text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
         >
+          {" "}
+          <h1 className="pr-3 font-extralight hidden lg:flex">خونه</h1>
           <House size={35} />
         </Link>
         <Link
           to={"/ShoppingPage"}
           className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-centerr"
         >
-          <h1 className="pr-3 font-extralight hidden lg:flex">
-            {t("eyeGlasses")}
-          </h1>
+          <h1 className="pr-3 font-extralight hidden lg:flex">دسته بندی ها</h1>
           <Eyeglasses size={35} />
         </Link>
         <Link
@@ -129,7 +129,7 @@ export default function navbar() {
           </Link>
         ) : null}
 
-        <div className="flex space-x-4">
+        {/* <div className="flex space-x-4">
           {Object.keys(lngs).map((lng) => (
             <button
               className="text-mainWhite transition   items-center ease-in duration-200  flex   active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6  "
@@ -169,7 +169,7 @@ export default function navbar() {
               <SignIn size={35} />
             </button>
           )}
-        </div>
+        </div> */}
 
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-10" onClose={closeModal}>
