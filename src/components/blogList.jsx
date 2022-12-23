@@ -1,4 +1,3 @@
-import { SquaresFour, Rows } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { supabase } from "../supabaseClient";
 import { useState } from "react";
@@ -12,15 +11,30 @@ import {
   Box,
 } from "@chakra-ui/react";
 
+import {
+  SortDescending,
+  SortAscending,
+  CaretRight,
+  CaretLeft,
+} from "phosphor-react";
+
 export default function blogList() {
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [firstImage, setFirstImage] = useState(null);
+  const [ascending, setAscention] = useState(false);
+  const [page, setPage] = useState(1);
+  const [from, setFrom] = useState(1);
+  const [to, setTo] = useState(2);
 
   const getBlogs = async function () {
     try {
       setLoading(true);
-      const { data, error } = await supabase.from("blogs").select();
+      const { data, error } = await supabase
+        .from("blogs")
+        .select()
+        .order("created_at", { ascending: ascending })
+        .range(from - 1, to * 2);
       if (error) throw error;
       setBlogs(data);
     } catch (error) {
@@ -32,7 +46,7 @@ export default function blogList() {
 
   useEffect(() => {
     getBlogs();
-  }, []);
+  }, [ascending , to]);
 
   if (loading) {
     return (
@@ -59,8 +73,23 @@ export default function blogList() {
   return (
     <div className="w-full lg:p-24 flex justify-center flex-wrap items-center h-full">
       <div className="flex bg-white items-center rounded justify-end w-full h-12">
-        <SquaresFour className=" transition hover:bg-mainBlue" size={45} />
-        <Rows className=" transition hover:bg-mainBlue" size={45} />
+        {ascending ? (
+          <SortAscending
+            className="transition"
+            size={32}
+            onClick={() => {
+              setAscention(false);
+            }}
+          />
+        ) : (
+          <SortDescending
+            className="transition"
+            onClick={() => {
+              setAscention(true);
+            }}
+            size={32}
+          />
+        )}
       </div>
       {blogs.map((blog) => {
         return (
@@ -92,6 +121,21 @@ export default function blogList() {
           </div>
         );
       })}
+      <div className="w-full flex justify-center">
+        <div className="flex  w-72 justify-around">
+          <div className="flex justify-center items-center">
+             <p
+              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-24 py-2 bg-mainWhite text-CoolGray-900 border-2 border-dashed border-CoolGray-900 hover:text-CoolGray-900 justify-center align-center cursor-pointer"
+              onClick={(e) => {
+                setTo(to + 1);
+              }}
+            >
+              <span>بیشتر نشونم بده</span>
+              {/* <ArrowDown size={30} weight="fill" /> */}
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
