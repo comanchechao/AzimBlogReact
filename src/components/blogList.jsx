@@ -36,9 +36,9 @@ export default function blogList() {
 
   if (loading) {
     return (
-      <div className="rounded w-full h-full flex items-center justify-center flex-col space-y-28">
+      <div className="rounded w-full h-full flex items-center justify-center flex-col">
         <Box padding="10" boxShadow="lg" bg="white">
-          <Stack>
+          <Stack className=" space-y-28">
             <SkeletonCircle size="250" />
             <SkeletonCircle size="250" />
             <SkeletonCircle size="250" />
@@ -66,13 +66,13 @@ export default function blogList() {
         return (
           <div
             key={blog.id}
-            className="flex flex-wrap justify-center rounded-sm space-y-10 p-12 w-full h-full my-14 bg-mainCream shadow-2xl"
+            className="flex flex-wrap justify-center rounded-sm space-y-10 lg:p-12 w-full h-full my-14 bg-mainCream shadow-2xl"
           >
             <div className="flex flex-col   space-y-2 md:flex-row lg:flex-row    h-full">
               <div className="w-full">
                 <BlogImage className=" " BlogImage={blog.firstImage} />
               </div>
-              <div className="flex p-2 space-y-5 text-center flex-col justify-between pt-14 items-center w-1/2  ">
+              <div className="flex p-2 space-y-5 text-center flex-col justify-between pt-14 items-center w-full lg:w-1/2  ">
                 <div>
                   <p className="text-xl lg:text-3xl">Sunday 2021</p>
                   <h1 className="text-3xl m-6 lg:text-6xl flex-col font-bold">
