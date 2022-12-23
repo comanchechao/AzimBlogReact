@@ -46,7 +46,7 @@ export default function blogList() {
 
   useEffect(() => {
     getBlogs();
-  }, [ascending , to]);
+  }, [ascending, to]);
 
   if (loading) {
     return (
@@ -124,8 +124,8 @@ export default function blogList() {
       <div className="w-full flex justify-center">
         <div className="flex  w-72 justify-around">
           <div className="flex justify-center items-center">
-             <p
-              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-24 py-2 bg-mainWhite text-CoolGray-900 border-2 border-dashed border-CoolGray-900 hover:text-CoolGray-900 justify-center align-center cursor-pointer"
+            <p
+              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-7 py-2 bg-mainWhite text-CoolGray-900 border-2 border-dashed border-CoolGray-900 hover:text-CoolGray-900 justify-center align-center cursor-pointer"
               onClick={(e) => {
                 setTo(to + 1);
               }}

@@ -26,7 +26,7 @@ export default function blogs() {
             <DotsThreeOutlineVertical size={40} />
           </div> */}
         </div>
-        <div className="w-screen h-auto lg:h-carousel  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray-800">
+        <div className="w-screen h-auto lg:h-carousel  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray-900">
           <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
             <img className="  object-contain h-96" src={nordGlasses} alt="" />
             <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">

@@ -94,30 +94,8 @@ export default function navbar() {
           to={"/ShoppingPage"}
           className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-centerr"
         >
-          <h1 className="pr-3 font-extralight hidden lg:flex">دسته بندی ها</h1>
+          <h1 className="pr-3 font-extralight hidden lg:flex">بلاگ ها</h1>
           <Eyeglasses size={35} />
-        </Link>
-        <Link
-          to={"/ShoppingPage"}
-          className="  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center text-mainWhite"
-        >
-          <h1 className="pr-3 font-extralight   ">{t("sunGlasses")}</h1>
-          <Sunglasses size={35} />
-        </Link>
-        <Link
-          to={"/ShoppingPage"}
-          className="  text-mainWhite transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
-        >
-          <h1 className="pr-3 font-extralight  ">{t("lenses")}</h1>
-          <Eye size={30} />
-        </Link>
-
-        <Link
-          to={"/blogs"}
-          className="  text-mainWhite transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
-        >
-          <h1 className="pr-3 font-extralight ">{t("blogs")}</h1>
-          <Article size={30} weight="fill" />
         </Link>
 
         {isLogged ? (
@@ -128,7 +106,29 @@ export default function navbar() {
             <Alien size={35} />
           </Link>
         ) : null}
-
+        {isLogged ? (
+          <div className="flex items-center space-x-2">
+            <Link
+              to={"/ProfilePage"}
+              className="  text-mainWhite transition  ease-in duration-200    active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+            >
+              <User size={30} />
+            </Link>
+            <button
+              onClick={handleSignOut}
+              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+            >
+              <SignOut size={30} weight="fill" />
+            </button>
+          </div>
+        ) : (
+          <button
+            onClick={openModal}
+            className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+          >
+            <SignIn size={35} />
+          </button>
+        )}
         {/* <div className="flex space-x-4">
           {Object.keys(lngs).map((lng) => (
             <button
