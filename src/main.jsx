@@ -8,7 +8,8 @@ import { Provider } from "react-redux";
 import "./assets/index.css";
 import store from "./Store/orders";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
-import Blog from './views/blog'
+import Blog from "./views/blog";
+import CreateBlog from './views/newBLog'
 
 const theme = extendTheme({
   colors: {
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
     path: "/blogs/:id",
     element: <Blog />,
   },
+  { path: "/create", element: <CreateBlog /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
