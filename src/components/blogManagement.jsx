@@ -23,6 +23,7 @@ import { Link } from "react-router-dom";
 export default function blogManage() {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
+  const [capturedId , setCaptureId ] = useState(null)
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = useRef(null);
@@ -37,6 +38,16 @@ export default function blogManage() {
       alert(error.message);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const removeBlog = async function (id) {
+    try {
+      const { error } = await supabase.from("blogs").delete().eq("id", id);
+      if(error) throw error
+      alert('removeds')
+    } catch (error) {
+      alert(error.message)
     }
   };
 
@@ -92,11 +103,17 @@ export default function blogManage() {
 
                   <Button
                     className="transition font-bold text-xl hover:text-white bg-red-500 text-white hover:bg-gray-600 p-9 rounded"
-                    onClick={onOpen}
+                   
+                     onClick={() => {
+                        setCaptureId(blog.id);
+                        console.log(capturedId)
+                        onOpen()
+                      }}
                   >
                     <Trash
                       onClick={() => {
                         setCaptureId(blog.id);
+                        console.log(capturedId)
                       }}
                       className="text-red-500"
                       size={32}
@@ -110,7 +127,7 @@ export default function blogManage() {
                   >
                     <ModalOverlay />
                     <ModalContent>
-                      <ModalHeader>delete {blog.blogTitle}</ModalHeader>
+                      <ModalHeader>Delete Action</ModalHeader>
                       <ModalCloseButton />
                       <ModalBody>Are you sure to delete?</ModalBody>
 
@@ -120,7 +137,7 @@ export default function blogManage() {
                         </Button>
                         <Button
                           onClick={() => {
-                            removeBlog();
+                            removeBlog(capturedId);
                           }}
                           className="bg-red-500 text-white"
                           variant="ghost"
