@@ -48,6 +48,8 @@ export default function blogManage() {
       alert('removeds')
     } catch (error) {
       alert(error.message)
+    }finally{
+      getBlogs()
     }
   };
 
@@ -138,6 +140,7 @@ export default function blogManage() {
                         <Button
                           onClick={() => {
                             removeBlog(capturedId);
+                            onClose()
                           }}
                           className="bg-red-500 text-white"
                           variant="ghost"
