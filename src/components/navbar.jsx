@@ -68,7 +68,7 @@ export default function navbar() {
   return (
     <div
       ref={boxRef}
-      className="w-screen bg-CoolGray-900  z-20 Navbar h-20 flex flex-col fixed  lg:px-8 lg:justify-between  text-2xl  "
+      className="w-screen bg-CoolGray  z-20 Navbar h-20 flex flex-col fixed  lg:px-8 lg:justify-between  text-2xl  "
     >
       <div className="flex  h-full justify-between lg:justify-around px-4 lg:px-0 items-center lg:py-7">
         <div className="lg:hidden flex">
@@ -76,15 +76,10 @@ export default function navbar() {
             <PhoneDrawer></PhoneDrawer>
           </Suspense>
         </div>
+
         <Link
           to={"/"}
-          className="text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-4 items-center"
-        >
-          <span className=" font-SultanFont text-5xl font-bold">Azim</span>
-        </Link>
-        <Link
-          to={"/"}
-          className="text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+          className="text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
         >
           {" "}
           <h1 className="pr-3 font-extralight hidden lg:flex">خونه</h1>
@@ -92,7 +87,7 @@ export default function navbar() {
         </Link>
         <Link
           to={"/ShoppingPage"}
-          className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-centerr"
+          className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-centerr"
         >
           <h1 className="pr-3 font-extralight hidden lg:flex">بلاگ ها</h1>
           <Eyeglasses size={35} />
@@ -101,7 +96,7 @@ export default function navbar() {
         {isLogged ? (
           <Link
             to={"/admin"}
-            className="  text-mainWhite transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+            className="  text-mainWhite transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
             <Alien size={35} />
           </Link>
@@ -110,13 +105,13 @@ export default function navbar() {
           <div className="flex items-center space-x-2">
             <Link
               to={"/ProfilePage"}
-              className="  text-mainWhite transition  ease-in duration-200    active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+              className="  text-mainWhite transition  ease-in duration-200    active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
             >
               <User size={30} />
             </Link>
             <button
               onClick={handleSignOut}
-              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
             >
               <SignOut size={30} weight="fill" />
             </button>
@@ -124,7 +119,7 @@ export default function navbar() {
         ) : (
           <button
             onClick={openModal}
-            className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+            className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
             <SignIn size={35} />
           </button>
@@ -132,7 +127,7 @@ export default function navbar() {
         {/* <div className="flex space-x-4">
           {Object.keys(lngs).map((lng) => (
             <button
-              className="text-mainWhite transition   items-center ease-in duration-200  flex   active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6  "
+              className="text-mainWhite transition   items-center ease-in duration-200  flex   active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6  "
               key={lng}
               style={{
                 display: i18n.resolvedLanguage === lng ? "none" : "block",
@@ -150,13 +145,13 @@ export default function navbar() {
             <div className="flex items-center space-x-2">
               <Link
                 to={"/ProfilePage"}
-                className="  text-mainWhite transition  ease-in duration-200    active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+                className="  text-mainWhite transition  ease-in duration-200    active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
               >
                 <User size={30} />
               </Link>
               <button
                 onClick={handleSignOut}
-                className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+                className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
               >
                 <SignOut size={30} weight="fill" />
               </button>
@@ -164,7 +159,7 @@ export default function navbar() {
           ) : (
             <button
               onClick={openModal}
-              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray-900 lg:hover:text-CoolGray-900 lg:p-6 items-center"
+              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
             >
               <SignIn size={35} />
             </button>
@@ -209,7 +204,7 @@ export default function navbar() {
         <div className="mx-auto flex items-center justify-center">
           <Alert status="success" variant="solid">
             <AlertIcon />
-            <span className="text-3xl text-CoolGray-900">
+            <span className="text-3xl text-CoolGray">
               {t("signOutSuccess")}
             </span>
           </Alert>

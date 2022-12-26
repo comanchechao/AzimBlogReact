@@ -14,19 +14,21 @@ export default function blogs() {
   return (
     <div className=" w-screen  h-full bg-mainWhite">
       <Navbar />
-      <div className="p-5 flex flex-col space-y-5 w-screen h-full items-center bg-CoolGray-900">
+      <div className="p-5 flex flex-col space-y-5 w-screen h-full items-center bg-CoolGray">
         <div className="mt-16 space-y-6 flex justify-end items-center flex-col   align-center">
           <div className="flex space-y-2 flex-col justify-center align-center items-center">
-            <h1 className="font-bold text-mainWhite capitalize leading-tight mt-7 text-5xl lg:text-10xl text-center">
+            <h1
+              className="font-bold text-mainWhite font-SultanFont capitalize leading-tight
+              mb-20  mt-40 text-5xl lg:text-10xl text-center"
+            >
               Azim Blog
             </h1>
-            <h2 className="text-xl text-mainWhite ">Monday 2022</h2>
           </div>
           {/* <div className="bg-white p-5 rounded-full">
             <DotsThreeOutlineVertical size={40} />
           </div> */}
         </div>
-        <div className="w-screen h-auto lg:h-carousel  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray-900">
+        <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
           <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
             <img className="  object-contain h-96" src={nordGlasses} alt="" />
             <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">

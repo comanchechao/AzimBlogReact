@@ -132,7 +132,7 @@ export default function blog() {
   return (
     <div className="w-full h-full">
       <Navbar />
-      <div className="flex w-screen h-full text-mainCream bg-CoolGray-900">
+      <div className="flex w-screen h-full text-mainCream bg-CoolGray">
         <div className="flex flex-col mt-20 lg:mt-32 w-full h-full">
           <div className="flex justify-center font-bold p-5 text-6xl">
             {blog.blogTitle}
@@ -155,7 +155,7 @@ export default function blog() {
 
             <p className="text-xl p-20">{blog.firstContent}</p>
           </div>
-          <div className="section2 bg-mainCream text-CoolGray-900 flex flex-col">
+          <div className="section2 bg-mainCream text-CoolGray flex flex-col">
             <div className="flex lg:p-5 flex-col space-y-3 h-full w-full justify-center items-center align-center">
               {secondLoading === false ? (
                 <img
@@ -173,7 +173,7 @@ export default function blog() {
             </div>
           </div>
 
-          <div className="section2 bg-CoolGray-900 text-mainWhite flex flex-col">
+          <div className="section2 bg-CoolGray text-mainWhite flex flex-col">
             <div className="flex lg:p-5 flex-col space-y-3 h-full w-full justify-center items-center align-center">
               {thirdLoading === true ? (
                 <Spinner className="m-10 animate-spin" size={80} />
@@ -191,7 +191,7 @@ export default function blog() {
             </div>
           </div>
 
-          <div className="section4 bg-CoolGray-900 text-mainWhite flex flex-col">
+          <div className="section4 bg-CoolGray text-mainWhite flex flex-col">
             <div className="flex lg:p-5 flex-col space-y-3 h-full w-full justify-center items-center align-center">
               {forthLoading === false ? (
                 <img
@@ -211,7 +211,7 @@ export default function blog() {
 
           <div className="flex  p-3 justify-end space-x-5 items-center">
             <div className="flex justify-center items-center">
-              <button className="rounded p-5 bg-mainCream text-CoolGray-900 font-bold text-2xl">
+              <button className="rounded p-5 bg-mainCream text-CoolGray font-bold text-2xl">
                 Continue Shopping
               </button>
             </div>

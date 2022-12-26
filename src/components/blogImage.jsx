@@ -33,7 +33,7 @@ export default function blogImage(props) {
 
   if (loading === true) {
     return (
-      <div className="w-full flex justify-center items-center h-96 bg-CoolGray-900">
+      <div className="w-full flex justify-center items-center h-96 bg-CoolGray">
         <Spinner className="animate-spin text-mainWhite" size={50} />
       </div>
     );

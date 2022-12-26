@@ -111,7 +111,7 @@ export default function blogList() {
                 </div>
                 <div className="flex justify-start p-5  items-end">
                   <Link to={`/blogs/${blog.id}`}>
-                    <button className="px-12 transition ease-in duration-300  border-4 border-dashed border-CoolGray-900 py-2 text-4xl hover:text-mainBlue hover:bg-CoolGray-900 font-bold my-3 bg-mainCream  rounded-full  ">
+                    <button className="px-12 transition ease-in duration-300  border-4 border-dashed border-CoolGray py-2 text-4xl hover:text-mainBlue hover:bg-CoolGray font-bold my-3 bg-mainCream  rounded-full  ">
                       Continue
                     </button>
                   </Link>
@@ -125,7 +125,7 @@ export default function blogList() {
         <div className="flex  w-72 justify-around">
           <div className="flex justify-center items-center">
             <p
-              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-7 py-2 bg-mainWhite text-CoolGray-900 border-2 border-dashed border-CoolGray-900 hover:text-CoolGray-900 justify-center align-center cursor-pointer"
+              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-7 py-2 bg-mainWhite text-CoolGray border-2 border-dashed border-CoolGray hover:text-CoolGray justify-center align-center cursor-pointer"
               onClick={(e) => {
                 setTo(to + 1);
               }}

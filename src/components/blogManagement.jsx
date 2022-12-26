@@ -23,7 +23,7 @@ import { Link } from "react-router-dom";
 export default function blogManage() {
   const [loading, setLoading] = useState(false);
   const [blogs, setBlogs] = useState([]);
-  const [capturedId , setCaptureId ] = useState(null)
+  const [capturedId, setCaptureId] = useState(null);
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = useRef(null);
@@ -44,12 +44,12 @@ export default function blogManage() {
   const removeBlog = async function (id) {
     try {
       const { error } = await supabase.from("blogs").delete().eq("id", id);
-      if(error) throw error
-      alert('removeds')
+      if (error) throw error;
+      alert("removeds");
     } catch (error) {
-      alert(error.message)
-    }finally{
-      getBlogs()
+      alert(error.message);
+    } finally {
+      getBlogs();
     }
   };
 
@@ -58,7 +58,7 @@ export default function blogManage() {
   }, []);
   return (
     <div className="flex flex-col bg-blueGray-200 items-center space-y-5 w-full justify-center p-5 capitalize">
-      <div className="flex w-full items-center justify-between px-3 bg-CoolGray-900 h-20">
+      <div className="flex w-full items-center justify-between px-3 bg-CoolGray h-20">
         <input
           className="rounded p-3 w-80"
           placeholder="Search ... "
@@ -84,7 +84,7 @@ export default function blogManage() {
             return (
               <div
                 key={blog.id}
-                className="flex flex-col items-center pb-2  justify-around bg-CoolGray-900 w-full h-full lg:h-1/2 lg:w-1/2 space-y-5 rounded shadow-xl"
+                className="flex flex-col items-center pb-2  justify-around bg-CoolGray w-full h-full lg:h-1/2 lg:w-1/2 space-y-5 rounded shadow-xl"
               >
                 <BlogImage BlogImage={blog.firstImage} />
                 <h2 className="text-3xl text-mainWhite font-bold">
@@ -98,24 +98,23 @@ export default function blogManage() {
                     onClick={() => {
                       console.log(blog.id);
                     }}
-                    className="transition font-bold text-xl  bg-mainWhite text-CoolGray-900 hover:bg-mainCream p-3 rounded"
+                    className="transition font-bold text-xl  bg-mainWhite text-CoolGray hover:bg-mainCream p-3 rounded"
                   >
                     Edit
                   </button>
 
                   <Button
                     className="transition font-bold text-xl hover:text-white bg-red-500 text-white hover:bg-gray-600 p-9 rounded"
-                   
-                     onClick={() => {
-                        setCaptureId(blog.id);
-                        console.log(capturedId)
-                        onOpen()
-                      }}
+                    onClick={() => {
+                      setCaptureId(blog.id);
+                      console.log(capturedId);
+                      onOpen();
+                    }}
                   >
                     <Trash
                       onClick={() => {
                         setCaptureId(blog.id);
-                        console.log(capturedId)
+                        console.log(capturedId);
                       }}
                       className="text-red-500"
                       size={32}
@@ -140,7 +139,7 @@ export default function blogManage() {
                         <Button
                           onClick={() => {
                             removeBlog(capturedId);
-                            onClose()
+                            onClose();
                           }}
                           className="bg-red-500 text-white"
                           variant="ghost"

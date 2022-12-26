@@ -133,9 +133,7 @@ export default function Auth() {
                     className="text-lg self-center font-medium leading-6 "
                   >
                     <div className="flex w-full p-5 space-y-2 h-full flex-col align-center items-center justify-center">
-                      <h1 className="text-5xl text-CoolGray-900">
-                        {t("signUp")}
-                      </h1>
+                      <h1 className="text-5xl text-CoolGray">{t("signUp")}</h1>
                       {/* <p className="text-7xl font-bold">کافه پینت</p> */}
                     </div>
                   </Dialog.Title>
@@ -148,7 +146,7 @@ export default function Auth() {
                       alert ? (
                         <Alert status="success" variant="solid">
                           <AlertIcon />
-                          <span className="text-xl text-CoolGray-900">
+                          <span className="text-xl text-CoolGray">
                             {t("signUpSuccess")}
                           </span>
                         </Alert>
@@ -175,13 +173,13 @@ export default function Auth() {
                           />
                           <div className="p-5 flex flex-col ">
                             <button
-                              className="button block px-5 py-3 bg-CoolGray-900 text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray-900  "
+                              className="button block px-5 py-3 bg-CoolGray text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                               aria-live="polite"
                             >
                               {t("signIn")}
                             </button>
                             <button
-                              className="button block px-5 py-3 border-2 border-dashed  border-CoolGray-900 text-CoolGray-900 mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray-900  "
+                              className="button block px-5 py-3 border-2 border-dashed  border-CoolGray text-CoolGray mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                               onClick={(event) => {
                                 event.preventDefault();
                                 logState(false);
@@ -217,7 +215,7 @@ export default function Auth() {
           alert ? (
             <Alert status="success" variant="solid">
               <AlertIcon />
-              <span className="text-3xl text-CoolGray-900">
+              <span className="text-3xl text-CoolGray">
                 {t("loginSuccess")}
               </span>
             </Alert>
@@ -241,14 +239,14 @@ export default function Auth() {
               />
               <div className="lg:p-5 flex flex-col">
                 <button
-                  className="button block px-5 py-3 bg-CoolGray-900 text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray-900  "
+                  className="button block px-5 py-3 bg-CoolGray text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                   aria-live="polite"
                 >
                   {t("login")}
                 </button>
 
                 <button
-                  className="button block px-5 py-3 border-2 border-dashed   border-CoolGray-900 text-CoolGray-900 mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray-900  "
+                  className="button block px-5 py-3 border-2 border-dashed   border-CoolGray text-CoolGray mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                   onClick={(event) => {
                     event.preventDefault();
                     openModal();

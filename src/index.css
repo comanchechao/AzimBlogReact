@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "LaleZar";
-  src: url("../src/assets/fonts/Bellefair-Regular.ttf");
+  src: url("../src/assets/fonts/Ubuntu-Light.ttf");
   font-style: normal;
   font-display: swap;
 
@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: "SultanFont";
-  src: url("../src/assets/fonts/Cookie-Regular.ttf");
+  src: url("../src/assets/fonts/JosefinSans-VariableFont_wght.ttf");
   font-style: normal;
   font-display: swap;
 

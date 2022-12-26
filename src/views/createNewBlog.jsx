@@ -215,7 +215,7 @@ export default function newBlog() {
   const [tenContent, setTenContent] = useState("");
 
   return (
-    <div className="w-screen h-full bg-CoolGray-900">
+    <div className="w-screen h-full bg-CoolGray">
       <Navbar />
       <form
         onSubmit={handleSubmit}
@@ -230,14 +230,14 @@ export default function newBlog() {
             type="text"
             value={blogTitle}
             onChange={(e) => setBlogTitle(e.target.value)}
-            className="py-8 w-2/3 px-4 rounded text-left text-CoolGray-900 text-xl bg-mainWhite"
+            className="py-8 w-2/3 px-4 rounded text-left text-CoolGray text-xl bg-mainWhite"
           />
         </div>
-        <div className="flex my-4 mt-36  lg:mx-20 bg-CoolGray-900 border-2 border-mainWhite p-3 space-y-6 flex-col justify-center  items-center">
+        <div className="flex my-4 mt-36  lg:mx-20 bg-CoolGray border-2 border-mainWhite p-3 space-y-6 flex-col justify-center  items-center">
           <div className="flex space-y-4 w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="file1"
-              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray-900 transition p-5 bg-CoolGray-900 rounded-full text-white"
+              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray transition p-5 bg-CoolGray rounded-full text-white"
             >
               {uploading ? <Spinner /> : <Upload size={40}></Upload>}
             </label>
@@ -260,7 +260,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-5 lg:w-1/2 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-5 lg:w-1/2 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></input>
           </div>
           <div className="p-4 flex w-full h-full flex-col justify-center items-center">
@@ -276,7 +276,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
 
             <label
@@ -291,7 +291,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
           <div className="sticky flex justify-start p-5 items-center w-full">
@@ -305,7 +305,7 @@ export default function newBlog() {
           <div className="flex space-y-4 w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="file2"
-              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray-900 transition p-5 bg-CoolGray-900 rounded-full text-white"
+              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray transition p-5 bg-CoolGray rounded-full text-white"
             >
               {uploading ? <Spinner /> : <Upload size={40}></Upload>}
             </label>
@@ -319,7 +319,7 @@ export default function newBlog() {
             />
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               Enter Title
             </label>
@@ -329,13 +329,13 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-5 lg:w-1/2 w-full text-CoolGray-100 bg-CoolGray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-5 lg:w-1/2 w-full text-CoolGray-100 bg-CoolGray rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></input>
           </div>
           <div className="p-4 flex w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               more info
             </label>
@@ -345,12 +345,12 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-100 bg-CoolGray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-100 bg-CoolGray rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
 
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               content
             </label>
@@ -360,7 +360,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-100 bg-CoolGray-900 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-100 bg-CoolGray rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
           <div className="sticky flex justify-start p-5 items-center w-full">
@@ -370,11 +370,11 @@ export default function newBlog() {
           </div>
         </div>
 
-        <div className="flex space-y-6 flex-col justify-center bg-CoolGray-900 border-2 border-mainWhite p-3 rounded lg:mx-20 items-center">
+        <div className="flex space-y-6 flex-col justify-center bg-CoolGray border-2 border-mainWhite p-3 rounded lg:mx-20 items-center">
           <div className="flex space-y-4 w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="file3"
-              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray-900 transition p-5 bg-CoolGray-900 rounded-full text-white"
+              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray transition p-5 bg-CoolGray rounded-full text-white"
             >
               {uploading ? <Spinner /> : <Upload size={40}></Upload>}
             </label>
@@ -398,7 +398,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-5 lg:w-1/2 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-5 lg:w-1/2 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></input>
           </div>
           <div className="p-4 flex w-full h-full flex-col justify-center items-center">
@@ -414,7 +414,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
 
             <label
@@ -429,7 +429,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-900 bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray bg-mainCream rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
 
@@ -444,7 +444,7 @@ export default function newBlog() {
           <div className="flex space-y-4 w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="file4"
-              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray-900 transition p-5 bg-CoolGray-900 rounded-full text-white"
+              className=" cursor-pointer hover:bg-mainYellow hover:text-CoolGray transition p-5 bg-CoolGray rounded-full text-white"
             >
               {uploading ? <Spinner /> : <Upload size={40}></Upload>}
             </label>
@@ -458,7 +458,7 @@ export default function newBlog() {
             />
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               Title
             </label>
@@ -468,13 +468,13 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-5 rounded-full lg:w-1/2 w-full text-CoolGray-800 bg-mainWhite border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-5 rounded-full lg:w-1/2 w-full text-CoolGray bg-mainWhite border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             ></input>
           </div>
           <div className="p-4 flex w-full h-full flex-col justify-center items-center">
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               more info
             </label>
@@ -484,12 +484,12 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-100 bg-CoolGray-800 rounded-lg border border-gray-800 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-24 w-full text-CoolGray-100 bg-CoolGray rounded-lg border border-gray-800 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
 
             <label
               htmlFor="large-input"
-              className="block mb-2 text-CoolGray-900 font-bold text-3xl"
+              className="block mb-2 text-CoolGray font-bold text-3xl"
             >
               content
             </label>
@@ -499,7 +499,7 @@ export default function newBlog() {
               placeholder="type ... "
               type="text"
               id="large-input"
-              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-100 bg-CoolGray-800 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="block p-3 lg:w-2/3 h-52 w-full text-CoolGray-100 bg-CoolGray rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-CoolGray-500  dark:placeholder-gray-400 text-2xl dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
           <div className="flex justify-start p-5 items-center w-full">
@@ -514,17 +514,17 @@ export default function newBlog() {
             <input
               placeholder="Author"
               type="text"
-              className="p-5  rounded-sm shadow-md focus:text-CoolGray-900 text-CoolGray-900   hover:text-CoolGray-900 font-bold text-2xl hover:bg-mainCream transition bg-mainWhite"
+              className="p-5  rounded-sm shadow-md focus:text-CoolGray text-CoolGray   hover:text-CoolGray font-bold text-2xl hover:bg-mainCream transition bg-mainWhite"
             />
             <input
               placeholder="Refrence"
-              className="p-5 rounded-sm placeholder-gray-400 shadow-md focus:text-CoolGray-900 text-CoolGray-900   hover:text-CoolGray-900 font-bold text-2xl hover:bg-mainCream transition bg-mainWhite"
+              className="p-5 rounded-sm placeholder-gray-400 shadow-md focus:text-CoolGray text-CoolGray   hover:text-CoolGray font-bold text-2xl hover:bg-mainCream transition bg-mainWhite"
             />
           </div>
 
           <div className="flex justify-center items-center">
             <button
-              className="px-10 py-4 my-3 rounded-full  font-black  text-CoolGray-900 hover:text-CoolGray-900 hover:bg-mainCream text-2xl  duration-300
+              className="px-10 py-4 my-3 rounded-full  font-black  text-CoolGray hover:text-CoolGray hover:bg-mainCream text-2xl  duration-300
 transition bg-mainYellow"
             >
               Publish
