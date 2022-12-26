@@ -35,10 +35,43 @@ const lngs = {
 export default function navbar() {
   const [alert, setAlert] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
+  
+  const [loading, setLoading] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   // log check
+ const [isLogged , setIsLogged] = useState(false)
 
-  const isLogged = useSelector((state) => state.user.isLogged);
+  const handleLogin = async (e) => {
+    e.preventDefault();
+
+    try {
+      setLoading(true);
+      const { error } = await supabase.auth.signIn({ email, password });
+      if (error) throw error;
+      supabase.auth.onAuthStateChange((event, session) => {
+        if (event == "SIGNED_IN") console.log("SIGNED_IN", session);
+      });
+    } catch (error) {
+      alert(error.error_description || error.message);
+    } finally {
+      setLoading(false);
+      setAlert(true);
+      setTimeout(() => {
+        closeModal();
+      }, 2000);
+    }
+  };
+  const listenSignin = async function () {
+    try {
+      supabase.auth.onAuthStateChange((event, session) => {
+        if (event == "SIGNED_IN") console.log("SIGNED_IN", session);
+      });
+    } catch (error) {
+      alert(error.message);
+    }
+  };
 
   function closeModal() {
     setIsOpen(false);
@@ -117,12 +150,7 @@ export default function navbar() {
             </button>
           </div>
         ) : (
-          <button
-            onClick={openModal}
-            className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
-          >
-            <SignIn size={35} />
-          </button>
+          <button ><Auth /></button>
         )}
         {/* <div className="flex space-x-4">
           {Object.keys(lngs).map((lng) => (
@@ -166,39 +194,7 @@ export default function navbar() {
           )}
         </div> */}
 
-        <Transition appear show={isOpen} as={Fragment}>
-          <Dialog as="div" className="relative z-10" onClose={closeModal}>
-            <Transition.Child
-              as={Fragment}
-              enter="ease-out duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave=" ease-in duration-200 hidden lg:flex "
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <div className="fixed inset-0 bg-black bg-opacity-25" />
-            </Transition.Child>
-
-            <div className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 overflow-y-auto">
-              <div className="flex lg:w-full self-center min-h-full items-center justify-center text-center">
-                <Transition.Child
-                  as={Fragment}
-                  enter="ease-out duration-300"
-                  enterFrom="opacity-0 scale-95"
-                  enterTo="opacity-100 scale-100"
-                  leave=" ease-in duration-200 hidden lg:flex "
-                  leaveFrom="opacity-100 scale-100"
-                  leaveTo="opacity-0 scale-95"
-                >
-                  <Dialog.Panel className="w-full h-full transform overflow-hidden rounded shadow-xl transition-all">
-                    <Auth></Auth>
-                  </Dialog.Panel>
-                </Transition.Child>
-              </div>
-            </div>
-          </Dialog>
-        </Transition>
+      
       </div>
       {alert ? (
         <div className="mx-auto flex items-center justify-center">
