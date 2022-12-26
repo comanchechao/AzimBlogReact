@@ -88,13 +88,13 @@ export default function Auth() {
       setLoading(true);
       const { error } = await supabase.auth.signIn({ email, password });
       if (error) throw error;
-      checkLog(true);
+      logState(true);
+      setAlert(true);
     } catch (error) {
       alert(error.error_description || error.message);
     } finally {
       setLoading(false);
-      setAlert(true);
-      logState(true)
+
       setTimeout(() => {
         closeModal();
       }, 2000);
@@ -104,15 +104,21 @@ export default function Auth() {
   return (
     <div className="lg:w-full w-screen   h-full bg-mainWhite rounded-sm flex  flex-col justify-start shadow-2xl  items-center z-50">
       <div className=" flex items-center justify-center">
-        {isLogged ? (  <button onClick={openModal}
+        {isLogged ? (
+          <button
+            onClick={openModal}
             className="bg-CoolGray lg:hover:bg-mainYellow  text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
             <User size={35} />
-          </button>) : (  <button onClick={openModal}
+          </button>
+        ) : (
+          <button
+            onClick={openModal}
             className="bg-CoolGray lg:hover:bg-mainYellow  text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
             <SignIn size={35} />
-          </button>) }
+          </button>
+        )}
       </div>
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog as="div" className="relative z-10" onClose={closeModal}>
