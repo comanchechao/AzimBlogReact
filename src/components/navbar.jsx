@@ -119,7 +119,7 @@ export default function navbar() {
           <House size={35} />
         </Link>
         <Link
-          to={"/ShoppingPage"}
+          to={"/create"}
           className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-centerr"
         >
           <h1 className="pr-3 font-extralight hidden lg:flex">بلاگ ها</h1>
