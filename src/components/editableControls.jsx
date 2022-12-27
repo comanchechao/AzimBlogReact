@@ -38,7 +38,7 @@ export default function EditableControls() {
   return (
     <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
       <Editable
-        className="bg-mainCream rounded-md"
+        className="bg-mainCream rounded-sm"
         defaultValue="Title"
         isPreviewFocusable={true}
         selectAllOnFocus={false}
@@ -56,7 +56,7 @@ export default function EditableControls() {
         <EditableControls />
       </Editable>
       <Editable
-        className="bg-mainCream rounded-md"
+        className="bg-mainCream rounded-sm"
         defaultValue="Author Name"
         isPreviewFocusable={true}
         selectAllOnFocus={false}
@@ -74,7 +74,7 @@ export default function EditableControls() {
         <EditableControls />
       </Editable>
       <Editable
-        className="bg-mainCream rounded-md"
+        className="bg-mainCream rounded-sm"
         defaultValue="Article Edit"
         isPreviewFocusable={true}
         selectAllOnFocus={false}
