@@ -14,8 +14,6 @@ import {
 import {
   SortDescending,
   SortAscending,
-  CaretRight,
-  CaretLeft,
 } from "phosphor-react";
 
 export default function blogList() {

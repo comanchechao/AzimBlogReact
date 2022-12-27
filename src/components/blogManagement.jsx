@@ -100,7 +100,7 @@ export default function blogManage() {
                     }}
                     className="transition font-bold text-xl  bg-mainWhite text-CoolGray hover:bg-mainCream p-3 rounded"
                   >
-                    Edit
+                    <Link to={`/edit/${blog.id}`}>Edit</Link>
                   </button>
 
                   <Button
