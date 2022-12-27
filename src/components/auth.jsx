@@ -151,8 +151,9 @@ export default function Auth() {
                     className="text-lg self-center font-medium leading-6 "
                   >
                     <div className="flex w-full p-5 space-y-2 h-full flex-col align-center items-center justify-center">
-                      <h1 className="text-5xl text-CoolGray">{t("login")}</h1>
-                      {/* <p className="text-7xl font-bold">کافه پینت</p> */}
+                      <h1 className="text-7xl text-CoolGray capitalize font-extralight">
+                        ورود
+                      </h1>
                     </div>
                   </Dialog.Title>
                   <div
@@ -163,9 +164,6 @@ export default function Auth() {
                     aria-live="polite"
                   >
                     <div className="flex w-full  space-y-2 mb-8 h-full flex-col align-center items-center justify-center">
-                      <h1 className="text-7xl capitalize font-extralight">
-                        {t("login")}
-                      </h1>
                       {/* <p className="text-8xl">کافه پینت</p> */}
                     </div>
                     {

@@ -9,8 +9,9 @@ import "./assets/index.css";
 import store from "./Store/orders";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import Blog from "./views/blog";
-import CreateBlog from './views/newBLog'
-import NewBlog from './views/createNewBlog'
+import CreateBlog from "./views/newBLog";
+import NewBlog from "./views/createNewBlog";
+import EditBlog from "./views/editBlog";
 
 const theme = extendTheme({
   colors: {
@@ -32,7 +33,9 @@ const router = createBrowserRouter([
     element: <Blog />,
   },
   { path: "/create", element: <CreateBlog /> },
-  {path: "/create/newblog" , element: <NewBlog /> }
+  { path: "/edit", element: <EditBlog /> },
+
+  { path: "/create/newblog", element: <NewBlog /> },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
