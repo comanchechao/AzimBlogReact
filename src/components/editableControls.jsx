@@ -213,10 +213,10 @@ export default function EditableControls(props) {
       {isLoaded ? (
         <div> nothing</div>
       ) : (
-        <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
+        <div className="h-full w-full justify-center items-center flex px-4  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
           <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
-            <div className="flex text-white border-b-2 w-full font-bold justify-center items-center">
-              <h1>blog detail</h1>
+            <div className="flex text-white   w-full font-bold justify-center items-center">
+              <h1 className="text-mainBlue text-4xl font-bold">Blog Detail</h1>
             </div>
             <Editable
               className="bg-mainCream rounded-sm"
@@ -277,8 +277,8 @@ export default function EditableControls(props) {
             </Editable>
           </div>
           <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
-            <div className="flex text-white border-b-2 w-full font-bold justify-center items-center">
-              <h1>first section</h1>
+            <div className="flex text-white   w-full font-bold justify-center items-center">
+              <h1 className="text-mainBlue capitalize my-5">first section</h1>
             </div>
             <Editable
               className="bg-mainCream rounded-sm"
@@ -345,8 +345,8 @@ export default function EditableControls(props) {
             </Editable>
           </div>
           <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
-            <div className="flex text-white border-b-2 w-full font-bold justify-center items-center">
-              <h1>second section</h1>
+            <div className="flex text-white  w-full font-bold justify-center items-center">
+              <h1 className="text-mainBlue capitalize my-5">second section</h1>
             </div>
             <Editable
               className="bg-mainCream rounded-sm"
@@ -413,8 +413,8 @@ export default function EditableControls(props) {
             </Editable>
           </div>
           <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
-            <div className="flex text-white border-b-2 w-full font-bold justify-center items-center">
-              <h1>third section</h1>
+            <div className="flex text-white  w-full font-bold justify-center items-center">
+              <h1 className="text-mainBlue my-5 capitalize">third section</h1>
             </div>
             <Editable
               className="bg-mainCream rounded-sm"
@@ -481,8 +481,8 @@ export default function EditableControls(props) {
             </Editable>
           </div>
           <div className="h-full w-full justify-center items-center flex  flex-col lg:px-24 text-4xl space-y-8 my-4 ">
-            <div className="flex text-white border-b-2 w-full font-bold justify-center items-center">
-              <h1>forth section</h1>
+            <div className="flex text-white   w-full font-bold justify-center items-center">
+              <h1 className="text-mainBlue capitalize my-5">forth section</h1>
             </div>
             <Editable
               className="bg-mainCream rounded-sm"
@@ -549,12 +549,12 @@ export default function EditableControls(props) {
             </Editable>
           </div>
           <div className="flex items-center justify-center space-x-6">
-            <button className="px-12 transition ease-in text-white duration-300 py-2 text-3xl hover:text-mainBlue hover:bg-CoolGray font-bold my-3 bg-red-500  rounded-full  ">
+            <button className="lg:px-12 px-8 py-1 transition ease-in text-white duration-300 lg:py-2 text-xl lg:text-3xl hover:text-mainBlue hover:bg-CoolGray font-bold my-3 bg-red-500  rounded-full  ">
               Delete Article
             </button>
             <button
               onClick={handleUpdate}
-              className="px-12 transition ease-in duration-300 py-2 text-3xl hover:text-mainBlue hover:bg-CoolGray font-bold my-3 bg-mainWhite  rounded-full  "
+              className="lg:px-12 px-8 py-1 transition ease-in duration-300 lg:py-2 text-xl lg:text-3xl hover:text-mainBlue hover:bg-CoolGray font-bold my-3 bg-mainWhite  rounded-full  "
             >
               Confirm Changes
             </button>

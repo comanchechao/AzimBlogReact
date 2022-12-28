@@ -1,27 +1,10 @@
 import Auth from "./auth";
-import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useRef, useEffect, Suspense, lazy } from "react";
 import { supabase } from "../supabaseClient";
-import {
-  Alert,
-  AlertIcon,
-  AlertTitle,
-  AlertDescription,
-} from "@chakra-ui/react";
+import { Alert, AlertIcon } from "@chakra-ui/react";
 const PhoneDrawer = lazy(() => import("./phoneDrawer"));
 
-import {
-  SignIn,
-  House,
-  Alien,
-  Eyeglasses,
-  Sunglasses,
-  Globe,
-  Article,
-  Eye,
-  User,
-  SignOut,
-} from "phosphor-react";
+import { House, Alien, Article, User, SignOut } from "phosphor-react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
@@ -35,13 +18,13 @@ const lngs = {
 export default function navbar() {
   const [alert, setAlert] = useState(false);
   let [isOpen, setIsOpen] = useState(false);
-  
+
   const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   // log check
- const [isLogged , setIsLogged] = useState(false)
+  const [isLogged, setIsLogged] = useState(false);
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -114,7 +97,6 @@ export default function navbar() {
           to={"/"}
           className="text-mainWhite font-extrabold   transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
         >
-          {" "}
           <h1 className="pr-3 font-extralight hidden lg:flex">خونه</h1>
           <House size={35} />
         </Link>
@@ -123,7 +105,7 @@ export default function navbar() {
           className="text-mainWhite font-extrabold  transition  ease-in duration-200 hidden lg:flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-centerr"
         >
           <h1 className="pr-3 font-extralight hidden lg:flex">بلاگ ها</h1>
-          <Eyeglasses size={35} />
+          <Article size={35} weight="fill" />
         </Link>
 
         {isLogged ? (
@@ -150,7 +132,9 @@ export default function navbar() {
             </button>
           </div>
         ) : (
-          <button ><Auth /></button>
+          <button>
+            <Auth />
+          </button>
         )}
         {/* <div className="flex space-x-4">
           {Object.keys(lngs).map((lng) => (
@@ -193,8 +177,6 @@ export default function navbar() {
             </button>
           )}
         </div> */}
-
-      
       </div>
       {alert ? (
         <div className="mx-auto flex items-center justify-center">

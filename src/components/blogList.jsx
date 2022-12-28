@@ -11,10 +11,7 @@ import {
   Box,
 } from "@chakra-ui/react";
 
-import {
-  SortDescending,
-  SortAscending,
-} from "phosphor-react";
+import { SortDescending, SortAscending } from "phosphor-react";
 
 export default function blogList() {
   const [blogs, setBlogs] = useState([]);
@@ -123,7 +120,7 @@ export default function blogList() {
         <div className="flex  w-72 justify-around">
           <div className="flex justify-center items-center">
             <p
-              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:bg-mainBlue duration-300 px-7 py-2 bg-mainWhite text-CoolGray border-2 border-dashed border-CoolGray hover:text-CoolGray justify-center align-center cursor-pointer"
+              className="p-5 rounded-full flex flex-col space-y-4 text-2xl items-center my-6 transition ease-in hover:text-mainBlue hover:bg-CoolGray duration-300 px-7 py-2 bg-mainWhite text-CoolGray border-2 border-dashed border-CoolGray justify-center align-center cursor-pointer"
               onClick={(e) => {
                 setTo(to + 1);
               }}

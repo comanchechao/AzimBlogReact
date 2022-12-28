@@ -57,7 +57,7 @@ export default function blogManage() {
     getBlogs();
   }, []);
   return (
-    <div className="flex flex-col bg-blueGray-200 items-center space-y-5 w-full justify-center p-5 capitalize">
+    <div className="flex flex-col bg-mainCream pt-28 items-center space-y-5 w-full justify-center p-5 capitalize">
       <div className="flex w-full items-center justify-between px-3 bg-CoolGray h-20">
         <input
           className="rounded p-3 w-80"
@@ -79,7 +79,7 @@ export default function blogManage() {
       </div>
 
       {loading === false ? (
-        <div className="flex flex-wrap space-x-2  items-center space-y-2 w-full justify-center font-bold text-xl  h-full shadow-2xl rounded">
+        <div className="flex flex-wrap space-x-2  items-center space-y-28 w-full justify-center font-bold text-xl  h-full shadow-2xl rounded">
           {blogs.map((blog) => {
             return (
               <div
@@ -98,13 +98,13 @@ export default function blogManage() {
                     onClick={() => {
                       console.log(blog.id);
                     }}
-                    className="transition font-bold text-xl  bg-mainWhite text-CoolGray hover:bg-mainCream p-3 rounded"
+                    className="px-12 transition ease-in duration-300  border-2 border-dashed text-mainBlue hover:bg-mainBlue border-mainBlue py-2 text-2xl hover:text-CoolGray  font-bold my-3 bg-CoolGray  rounded-full  "
                   >
                     <Link to={`/edit/${blog.id}`}>Edit</Link>
                   </button>
 
-                  <Button
-                    className="transition font-bold text-xl hover:text-white bg-red-500 text-white hover:bg-gray-600 p-9 rounded"
+                  <button
+                    className="px-12 transition ease-in duration-300 border-2 border-dashed border-red-700  rounded-full text-red-700 hover:bg-white  py-2 text-2xl hover:text-CoolGray  font-bold my-3 bg-CoolGray  "
                     onClick={() => {
                       setCaptureId(blog.id);
                       console.log(capturedId);
@@ -116,10 +116,10 @@ export default function blogManage() {
                         setCaptureId(blog.id);
                         console.log(capturedId);
                       }}
-                      className="text-red-500"
+                      className="text-red-700"
                       size={32}
                     />
-                  </Button>
+                  </button>
                   <Modal
                     className="bg-Cyan-400"
                     finalFocusRef={finalRef}
