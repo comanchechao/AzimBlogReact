@@ -43,35 +43,7 @@ export default function navbar() {
   // log check
  const [isLogged , setIsLogged] = useState(false)
 
-  const handleLogin = async (e) => {
-    e.preventDefault();
 
-    try {
-      setLoading(true);
-      const { error } = await supabase.auth.signIn({ email, password });
-      if (error) throw error;
-      supabase.auth.onAuthStateChange((event, session) => {
-        if (event == "SIGNED_IN") console.log("SIGNED_IN", session);
-      });
-    } catch (error) {
-      alert(error.error_description || error.message);
-    } finally {
-      setLoading(false);
-      setAlert(true);
-      setTimeout(() => {
-        closeModal();
-      }, 2000);
-    }
-  };
-  const listenSignin = async function () {
-    try {
-      supabase.auth.onAuthStateChange((event, session) => {
-        if (event == "SIGNED_IN") console.log("SIGNED_IN", session);
-      });
-    } catch (error) {
-      alert(error.message);
-    }
-  };
 
   function closeModal() {
     setIsOpen(false);
@@ -144,7 +116,7 @@ export default function navbar() {
             </Link>
             <button
               onClick={handleSignOut}
-              className="  text-mainWhite transition  ease-in duration-200  flex  active:bg-mainBlue lg:hover:bg-mainBlue active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
+              className="  text-mainWhite transition  ease-in duration-200  flex   lg:p-6 items-center"
             >
               <SignOut size={30} weight="fill" />
             </button>
