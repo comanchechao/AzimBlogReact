@@ -117,8 +117,8 @@ export default function Auth() {
   };
 
   return (
-    <div className="w-full w-screen   h-full bg-mainWhite rounded-sm flex  flex-col justify-start shadow-2xl  items-center z-50">
-      <div className=" flex items-center justify-center">
+    <div className="w-full w-10/12   h-full  rounded-sm flex  flex-col justify-start shadow-2xl  items-between z-50">
+      <div className=" flex items-center justify-end ">
         {isLogged ? (
           <button
             onClick={openModal}
@@ -129,7 +129,7 @@ export default function Auth() {
         ) : (
           <button
             onClick={openModal}
-            className="flex bg-CoolGray lg:hover:bg-mainYellow w-24  text-mainWhite font-extrabold   transition  ease-in duration-200 lg:flex  justify-end lg:hover:text-CoolGray lg:p-6 items-center"
+            className="bg-CoolGray lg:hover:bg-mainYellow  text-mainWhite font-extrabold   transition  ease-in duration-200 lg:flex  active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
             <SignIn size={35} />
           </button>

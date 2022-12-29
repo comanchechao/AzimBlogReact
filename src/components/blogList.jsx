@@ -19,8 +19,8 @@ export default function blogList() {
   const [firstImage, setFirstImage] = useState(null);
   const [ascending, setAscention] = useState(false);
   const [page, setPage] = useState(1);
-  const [from, setFrom] = useState(1);
-  const [to, setTo] = useState(2);
+  const [from, setFrom] = useState(4);
+  const [to, setTo] = useState(5);
 
   const getBlogs = async function () {
     try {
