@@ -69,12 +69,10 @@ export default function blogManage() {
 
       <div className=" fixed bottom-5 right-5">
         <div className="flex justify-center items-center">
-          <Link to={"/create/newblog"}>
             <PlusCircle
               className="w-14 h-14 justify-self-center text-white bg-blueGray-900 rounded-full"
               size={42}
             />
-          </Link>
         </div>
       </div>
 
