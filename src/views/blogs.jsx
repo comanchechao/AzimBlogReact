@@ -40,6 +40,12 @@ export default function blogs() {
       <Navbar />
       <div className="p-5 flex flex-col space-y-5 w-screen h-full items-center bg-CoolGray">
         <div className="mt-16 space-y-6 w-full flex justify-end items-center flex-col   align-center">
+          <h1
+            className="font-bold text-mainWhite font-SultanFont capitalize leading-tight
+              mb-20  mt-40 text-5xl lg:text-10xl text-center"
+          >
+            Azim Blog
+          </h1>
           <div className="flex w-full space-y-2 flex-col justify-center align-center items-center">
             {loading ? (
               <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
@@ -113,7 +119,7 @@ export default function blogs() {
           </h1>
           <input
             className="p-4 w-80 rounded-full  mt-24 text-xl text-right placeholder-gray-900"
-            placeholder="جستوجو..."
+            placeholder="جستجو..."
             type="text"
           />
         </div>
