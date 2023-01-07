@@ -79,18 +79,18 @@ export default function blogs() {
                 </div>
               </div>
               <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-7 text-mainWhite items-center ">
-                <div className="flex w-full lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                <div className="flex w-full  flex-col items-center justify-center space-y-5 lg:space-x-5">
                   {!loading ? (
-                    <BlogImage BlogImage={secondBlog.firstImage} />
+                    <BlogImage className='w-52 h-52 object-contain' BlogImage={secondBlog.firstImage} />
                   ) : null}
 
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
                     {secondBlog.blogTitle}
                   </h1>
                 </div>
-                <div className="flex w-full lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                <div className="flex w-full  flex-col items-center justify-center space-y-5 lg:space-x-5">
                   {!loading ? (
-                    <BlogImage BlogImage={thirdBlog.firstImage} />
+                    <BlogImage className='w-52 h-52 object-contain' BlogImage={thirdBlog.firstImage} />
                   ) : null}
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
                     {thirdBlog.blogTitle}
@@ -114,7 +114,7 @@ export default function blogs() {
             <DotsThreeOutlineVertical size={40} />
           </div> */}
         </div>
-        <div className="flex flex-col w-full justify-center items-center ">
+        <div className="flex pt-10 flex-col w-full justify-center items-center ">
           <input
             className="p-4 w-80 rounded-full  mt-24 text-xl text-right placeholder-gray-900"
             placeholder="جستجو..."
