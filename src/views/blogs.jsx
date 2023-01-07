@@ -58,16 +58,19 @@ export default function blogs() {
             Azim Blog
           </h1>
           <div className="flex w-full space-y-2 flex-col justify-center align-center items-center">
-            <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
-              <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
+            <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row space-x-5 flex-col flex items-center bg-CoolGray">
+              <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-end flex-col text-center lg:text-right">
                 {!loading ? (
-                  <BlogImage BlogImage={firstBlog.firstImage} />
+                  <BlogImage
+                    className="h-96 object-contain  "
+                    BlogImage={firstBlog.firstImage}
+                  />
                 ) : null}
-                <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">
-                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40 mt-0 lg:mt-3">
+                <div className="flex items-center lg:items-end mt-2 flex-col space-y-3 lg:px-0 px-5">
+                  <h1 className="lg:text-4xl text-2xl font-bold  mt-0 lg:mt-3">
                     {firstBlog.blogTitle}
                   </h1>
-                  <h3 className="text-lg font-light text-mainCream lg:pr-40">
+                  <h3 className="text-lg font-light text-mainCream ">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Tempore inventore a iusto nemo, asperiores quod veniam
                     excepturi totam sit debitis magnam et accusamus dolores quo
@@ -75,8 +78,8 @@ export default function blogs() {
                   </h3>
                 </div>
               </div>
-              <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-6 text-mainWhite items-center ">
-                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+              <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-7 text-mainWhite items-center ">
+                <div className="flex w-full lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
                   {!loading ? (
                     <BlogImage BlogImage={secondBlog.firstImage} />
                   ) : null}
@@ -85,7 +88,7 @@ export default function blogs() {
                     {secondBlog.blogTitle}
                   </h1>
                 </div>
-                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                <div className="flex w-full lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
                   {!loading ? (
                     <BlogImage BlogImage={thirdBlog.firstImage} />
                   ) : null}
@@ -93,7 +96,7 @@ export default function blogs() {
                     {thirdBlog.blogTitle}
                   </h1>
                 </div>
-                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                {/* <div className="flex w-full lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
                     {!loading ? (
                       <BlogImage BlogImage={fourthBlog.firstImage} />
@@ -103,7 +106,7 @@ export default function blogs() {
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
                     {fourthBlog.blogTitle}
                   </h1>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -111,14 +114,7 @@ export default function blogs() {
             <DotsThreeOutlineVertical size={40} />
           </div> */}
         </div>
-        <div className="w-screen h-auto lg:h-carousel   lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray"></div>
-        <div className="flex flex-col w-full justify-center items-center flex-col">
-          <h1
-            className="font-bold mt-10 text-mainWhite font-SultanFont capitalize leading-tight
-                mt-40 text-xl lg:text-2xl text-center"
-          >
-            وبلاگ های بروز
-          </h1>
+        <div className="flex flex-col w-full justify-center items-center ">
           <input
             className="p-4 w-80 rounded-full  mt-24 text-xl text-right placeholder-gray-900"
             placeholder="جستجو..."

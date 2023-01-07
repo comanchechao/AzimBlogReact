@@ -38,14 +38,6 @@ export default function blogImage(props) {
       </div>
     );
   } else {
-    return (
-      <div className="w-full h-full">
-        <img
-          className=" w-full h-full lg:h-carousel object-contain"
-          src={image}
-          alt=""
-        />
-      </div>
-    );
+    return <img className=" w-full h-full object-contain" src={image} alt="" />;
   }
 }

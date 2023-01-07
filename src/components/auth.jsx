@@ -223,7 +223,7 @@ export default function Auth() {
                               className="button block px-5 py-3 bg-CoolGray text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                               aria-live="polite"
                             >
-                              {t("login")}
+                              ورود
                             </button>
                             <button
                               onClick={(e) => {
@@ -274,14 +274,14 @@ export default function Auth() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full  bg-blueGray-700 text-gray-200 max-w-md transform overflow-hidden rounded-sm   text-center align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full  bg-mainWhite text-gray-200 max-w-md transform overflow-hidden rounded-sm   text-center align-middle shadow-xl transition-all">
                   <Dialog.Title
                     as="h3"
                     className="text-lg self-center font-medium leading-6 "
                   >
                     <div className="flex w-full p-5 space-y-2 h-full flex-col align-center items-center justify-center">
-                      <h1 className="text-7xl text-gray-50 capitalize font-extralight">
-                        بازیابی رمز
+                      <h1 className="text-5xl mt-20 text-CoolGray capitalize font-extralight">
+                        بازیابی رمز عبور
                       </h1>
                     </div>
                   </Dialog.Title>
@@ -314,15 +314,13 @@ export default function Auth() {
                             value={recoveryEmail}
                             onChange={(e) => setRecoveryEmail(e.target.value)}
                           />
-                          <div className="lg:p-5 flex flex-col">
-                            <button
-                              onClick={passwordRecovery}
-                              className="button block px-5 py-3 bg-CoolGray text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
-                              aria-live="polite"
-                            >
-                              بازیابی رمز عبور
-                            </button>
-                          </div>
+                          <button
+                            onClick={passwordRecovery}
+                            className="button px-10 my-6 py-1 bg-CoolGray text-mainWhite   capitalize rounded-full font-bold text-xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
+                            aria-live="polite"
+                          >
+                            <span>بازیابی رمز عبور</span>
+                          </button>
                         </form>
                       ))
                     }
