@@ -47,63 +47,61 @@ export default function blogs() {
             Azim Blog
           </h1>
           <div className="flex w-full space-y-2 flex-col justify-center align-center items-center">
-            {loading ? (
-              <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
-                <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
+            <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
+              <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
+                <img
+                  className="  object-contain h-96"
+                  src={nordGlasses}
+                  alt=""
+                />
+                <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">
+                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40 mt-0 lg:mt-3">
+                    Lorem ipsum dolor sit amet consectetur
+                  </h1>
+                  <h3 className="text-lg font-light text-mainCream lg:pr-40">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempore inventore a iusto nemo, asperiores quod veniam
+                    excepturi totam sit debitis magnam et accusamus dolores quo
+                    molestias voluptatibus atque. Delectus, tenetur.
+                  </h3>
+                </div>
+              </div>
+              <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-6 text-mainWhite items-center ">
+                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
                   <img
-                    className="  object-contain h-96"
+                    className="  object-contain h-40"
                     src={nordGlasses}
                     alt=""
                   />
-                  <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">
-                    <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40 mt-0 lg:mt-3">
-                      Lorem ipsum dolor sit amet consectetur
-                    </h1>
-                    <h3 className="text-lg font-light text-mainCream lg:pr-40">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Tempore inventore a iusto nemo, asperiores quod veniam
-                      excepturi totam sit debitis magnam et accusamus dolores
-                      quo molestias voluptatibus atque. Delectus, tenetur.
-                    </h3>
-                  </div>
+
+                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
+                    Lorem ipsum dolor sit amet consectetur
+                  </h1>
                 </div>
-                <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-6 text-mainWhite items-center ">
-                  <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                    <img
-                      className="  object-contain h-40"
-                      src={nordGlasses}
-                      alt=""
-                    />
+                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                  <img
+                    className="  object-contain h-40"
+                    src={nordGlasses}
+                    alt=""
+                  />
 
-                    <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                      Lorem ipsum dolor sit amet consectetur
-                    </h1>
-                  </div>
-                  <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                    <img
-                      className="  object-contain h-40"
-                      src={nordGlasses}
-                      alt=""
-                    />
+                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
+                    Lorem ipsum dolor sit amet consectetur
+                  </h1>
+                </div>
+                <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
+                  <img
+                    className="  object-contain h-40"
+                    src={nordGlasses}
+                    alt=""
+                  />
 
-                    <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                      Lorem ipsum dolor sit amet consectetur
-                    </h1>
-                  </div>
-                  <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                    <img
-                      className="  object-contain h-40"
-                      src={nordGlasses}
-                      alt=""
-                    />
-
-                    <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                      Lorem ipsum dolor sit amet consectetur
-                    </h1>
-                  </div>
+                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
+                    Lorem ipsum dolor sit amet consectetur
+                  </h1>
                 </div>
               </div>
-            ) : null}
+            </div>
           </div>
           {/* <div className="bg-white p-5 rounded-full">
             <DotsThreeOutlineVertical size={40} />

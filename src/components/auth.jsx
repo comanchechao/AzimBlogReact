@@ -58,6 +58,8 @@ export default function Auth() {
       const { data, error } = await supabase.auth.resetPasswordForEmail(
         recoveryEmail
       );
+      if(error) throw error
+      alert('ایمیل خود را چک کنید.')
     } catch (error) {}
   };
 
