@@ -109,7 +109,7 @@ export default function Auth() {
       logState(true);
       setAlert(true);
     } catch (error) {
-      console.log(error.error_description || error.message);
+      alert(error.error_description || error.message);
     } finally {
       setLoading(false);
 
