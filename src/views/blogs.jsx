@@ -13,6 +13,9 @@ export default function blogs() {
   const { t, i18n } = useTranslation();
   const [blogs, setBlogs] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [firstBlog, setFirstBlog] = useState({});
+  const [secondBlog, setSecondBlog] = useState({});
+  const [thirdBlog, setThirdBlog] = useState({});
   const getBlogs = async function () {
     try {
       setLoading(true);
@@ -22,7 +25,9 @@ export default function blogs() {
         .order("created_at", { ascending: false })
         .limit(3);
       if (error) throw error;
-      blogs.push(data);
+      data.forEach(blog => {
+        blogs.push(blog)
+      });
     } catch (error) {
       alert(error.message);
     } finally {

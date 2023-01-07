@@ -58,8 +58,8 @@ export default function Auth() {
       const { data, error } = await supabase.auth.resetPasswordForEmail(
         recoveryEmail
       );
-      if(error) throw error
-      alert('ایمیل خود را چک کنید.')
+      if (error) throw error;
+      alert("ایمیل خود را چک کنید.");
     } catch (error) {}
   };
 
@@ -126,7 +126,10 @@ export default function Auth() {
             onClick={openModal}
             className="bg-CoolGray lg:hover:bg-mainYellow  text-mainWhite font-extrabold   transition  ease-in duration-200 lg:flex  active:text-CoolGray lg:hover:text-CoolGray lg:p-6 items-center"
           >
-            <User size={35} />
+            <Link to="/create">
+              {" "}
+              <User size={35} />
+            </Link>
           </button>
         ) : (
           <button
@@ -222,7 +225,10 @@ export default function Auth() {
                               {t("login")}
                             </button>
                             <button
-                              onClick={openModal2}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                openModal2();
+                              }}
                               className="button block px-5 py-3 bg-CoolGray text-mainWhite mb-2 capitalize rounded font-bold text-2xl transition ease-in-out duration-200 hover:bg-mainCream hover:text-CoolGray  "
                               aria-live="polite"
                             >
