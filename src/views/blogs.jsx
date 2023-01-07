@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { supabase } from "../supabaseClient";
 import BlogList from "../components/blogList";
 import { useTranslation } from "react-i18next";
+import BlogImage from "../components/blogImage";
 import logo from "../assets/images/logo.png";
 
 export default function blogs() {
@@ -16,6 +17,7 @@ export default function blogs() {
   const [firstBlog, setFirstBlog] = useState({});
   const [secondBlog, setSecondBlog] = useState({});
   const [thirdBlog, setThirdBlog] = useState({});
+  const [fourthBlog, setFourthBlog] = useState({});
   const getBlogs = async function () {
     try {
       setLoading(true);
@@ -23,16 +25,20 @@ export default function blogs() {
         .from("blogs")
         .select()
         .order("created_at", { ascending: false })
-        .limit(3);
+        .limit(4);
       if (error) throw error;
-      data.forEach(blog => {
-        blogs.push(blog)
+      data.forEach((blog) => {
+        blogs.push(blog);
       });
     } catch (error) {
       alert(error.message);
     } finally {
       setLoading(false);
       console.log(blogs);
+      setFirstBlog(blogs[0]);
+      setSecondBlog(blogs[1]);
+      setThirdBlog(blogs[2]);
+      setFourthBlog(blogs[3]);
     }
   };
 
@@ -54,14 +60,12 @@ export default function blogs() {
           <div className="flex w-full space-y-2 flex-col justify-center align-center items-center">
             <div className="w-screen h-auto lg:h-carousel mt-12  lg:px-32 lg:py-24 lg:flex-row flex-col flex items-center bg-CoolGray">
               <div className="lg:w-1/2 w-full h-auto text-mainWhite  flex items-center lg:items-start flex-col text-center lg:text-left">
-                <img
-                  className="  object-contain h-96"
-                  src={nordGlasses}
-                  alt=""
-                />
+                {!loading ? (
+                  <BlogImage BlogImage={firstBlog.firstImage} />
+                ) : null}
                 <div className="flex items-center lg:items-start mt-2 flex-col space-y-3 lg:px-0 px-5">
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40 mt-0 lg:mt-3">
-                    Lorem ipsum dolor sit amet consectetur
+                    {firstBlog.blogTitle}
                   </h1>
                   <h3 className="text-lg font-light text-mainCream lg:pr-40">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
@@ -73,36 +77,31 @@ export default function blogs() {
               </div>
               <div className="lg:w-1/2 w-full lg:mt-0 my-8  h-auto flex flex-col justify-center space-y-6 text-mainWhite items-center ">
                 <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                  <img
-                    className="  object-contain h-40"
-                    src={nordGlasses}
-                    alt=""
-                  />
+                  {!loading ? (
+                    <BlogImage BlogImage={secondBlog.firstImage} />
+                  ) : null}
 
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                    Lorem ipsum dolor sit amet consectetur
+                    {secondBlog.blogTitle}
                   </h1>
                 </div>
                 <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                  <img
-                    className="  object-contain h-40"
-                    src={nordGlasses}
-                    alt=""
-                  />
-
+                  {!loading ? (
+                    <BlogImage BlogImage={thirdBlog.firstImage} />
+                  ) : null}
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                    Lorem ipsum dolor sit amet consectetur
+                    {thirdBlog.blogTitle}
                   </h1>
                 </div>
                 <div className="flex lg:flex-row flex-col items-center justify-center space-y-5 lg:space-x-5">
-                  <img
-                    className="  object-contain h-40"
-                    src={nordGlasses}
-                    alt=""
-                  />
+                  <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
+                    {!loading ? (
+                      <BlogImage BlogImage={fourthBlog.firstImage} />
+                    ) : null}
+                  </h1>
 
                   <h1 className="lg:text-4xl text-2xl font-bold lg:pr-40">
-                    Lorem ipsum dolor sit amet consectetur
+                    {fourthBlog.blogTitle}
                   </h1>
                 </div>
               </div>

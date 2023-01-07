@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { userActions } from "../Store/user/user";
 import { useDisclosure } from "@chakra-ui/react";
 import { SignIn, SignOut, User } from "phosphor-react";
+import { Link } from "react-router-dom";
 import {
   Alert,
   AlertIcon,
